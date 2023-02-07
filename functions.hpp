@@ -1,6 +1,6 @@
 const auto cache_address = rebase(0x82BED0); // Put your rebase function instead of 'rebase', also the address might not be accurate so you'd have to give me a bit
 const auto cache_function = reinterpret_cast<void*>(cache_address); // DEREFERENCE
-const auto cache_call = reinterpret_cast<std::uintptr_t(__fastcall*)(std::uintptr_t, void*)>(cache_address); // Define our function
+const auto cache_call = reinterpret_cast<void(__fastcall*)(lua_State*, void*)>(cache_address); // Define our function
 
 int clone_ref(lua_State* state)
 {
