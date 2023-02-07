@@ -38,6 +38,6 @@ int compare_instances(lua_State* state)
 	const auto compared_instance = *reinterpret_cast<std::uintptr_t*>(lua_touserdata(state, 1)) == *reinterpret_cast<std::uintptr_t*>(lua_touserdata(state, 2));
 	lua_pushboolean(state, compared_instance);
 
-  // Return 1 value exactly which is the compared instance's results
+        // Return 1 value exactly which is the compared instance's results
 	return 1;
 }
